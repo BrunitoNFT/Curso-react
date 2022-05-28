@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Paciente = ({almacen}) => {
-
+    console.log(almacen)
   return (
       <div className='mt-10 w-full bg-white ml-5 py-10 px-5 rounded-xl shadow-xl'>
           <p className='font-bold mb-3 text-grey-700 uppercase'>Nombre:{" "}
@@ -21,6 +21,13 @@ const Paciente = ({almacen}) => {
               {almacen.sintomas}
               </span>
           </p>
+          <div className='flex justify-between mt-6 mx-8'>
+            <button className="bg-indigo-600 uppercase p-2 text-white font-bold rounded-lg hover:bg-indigo-900 duration-300"
+            /* onClick={} */
+            >editar</button>
+            <button className="bg-red-600 uppercase p-2 text-white font-bold rounded-lg hover:bg-red-900 duration-300">eliminar</button>
+
+          </div>
       </div>
   )
 }
